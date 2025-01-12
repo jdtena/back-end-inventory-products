@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import com.unir.products.model.pojo.ProductDto;
+import com.unir.products.controller.model.ProductDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -15,8 +15,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.unir.products.model.pojo.Product;
-import com.unir.products.model.request.CreateProductRequest;
+import com.unir.products.data.model.Product;
+import com.unir.products.controller.model.CreateProductRequest;
 import com.unir.products.service.ProductsService;
 
 import lombok.RequiredArgsConstructor;

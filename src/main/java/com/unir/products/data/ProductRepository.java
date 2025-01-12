@@ -3,7 +3,7 @@ package com.unir.products.data;
 import com.unir.products.data.utils.SearchCriteria;
 import com.unir.products.data.utils.SearchOperation;
 import com.unir.products.data.utils.SearchStatement;
-import com.unir.products.model.pojo.Product;
+import com.unir.products.data.model.Product;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Repository;

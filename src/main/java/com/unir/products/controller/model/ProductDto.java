@@ -1,4 +1,4 @@
-package com.unir.products.model.pojo;
+package com.unir.products.controller.model;
 
 import lombok.*;
 

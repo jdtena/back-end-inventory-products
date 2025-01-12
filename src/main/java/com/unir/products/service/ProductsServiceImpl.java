@@ -8,14 +8,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.fge.jsonpatch.JsonPatchException;
 import com.github.fge.jsonpatch.mergepatch.JsonMergePatch;
 import com.unir.products.data.ProductRepository;
-import com.unir.products.model.pojo.ProductDto;
+import com.unir.products.controller.model.ProductDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import com.unir.products.model.pojo.Product;
-import com.unir.products.model.request.CreateProductRequest;
+import com.unir.products.data.model.Product;
+import com.unir.products.controller.model.CreateProductRequest;
 
 @Service
 @Slf4j

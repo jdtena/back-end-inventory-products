@@ -1,5 +1,6 @@
-package com.unir.products.model.pojo;
+package com.unir.products.data.model;
 
+import com.unir.products.controller.model.ProductDto;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
