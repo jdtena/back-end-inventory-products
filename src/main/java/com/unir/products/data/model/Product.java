@@ -1,6 +1,7 @@
 package com.unir.products.data.model;
 
 import com.unir.products.controller.model.ProductDto;
+import com.unir.products.data.utils.Consts;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -28,16 +29,16 @@ public class Product {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(name = "name", unique = true)
+	@Column(name = Consts.NAME, unique = true)
 	private String name;
 	
-	@Column(name = "country")
+	@Column(name = Consts.COUNTRY)
 	private String country;
 	
-	@Column(name = "description")
+	@Column(name = Consts.DESCRIPTION)
 	private String description;
 	
-	@Column(name = "visible")
+	@Column(name = Consts.VISIBLE)
 	private Boolean visible;
 
 	public void update(ProductDto productDto) {

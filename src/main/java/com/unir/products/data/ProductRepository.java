@@ -1,5 +1,6 @@
 package com.unir.products.data;
 
+import com.unir.products.data.utils.Consts;
 import com.unir.products.data.utils.SearchCriteria;
 import com.unir.products.data.utils.SearchOperation;
 import com.unir.products.data.utils.SearchStatement;
@@ -34,21 +35,23 @@ public class ProductRepository {
 
     public List<Product> search(String name, String country, String description, Boolean visible) {
         SearchCriteria<Product> spec = new SearchCriteria<>();
+
         if (StringUtils.isNotBlank(name)) {
-            spec.add(new SearchStatement("name", name, SearchOperation.MATCH));
+            spec.add(new SearchStatement(Consts.NAME, name, SearchOperation.MATCH));
         }
 
         if (StringUtils.isNotBlank(country)) {
-            spec.add(new SearchStatement("country", country, SearchOperation.EQUAL));
+            spec.add(new SearchStatement(Consts.COUNTRY, country, SearchOperation.EQUAL));
         }
 
         if (StringUtils.isNotBlank(description)) {
-            spec.add(new SearchStatement("description", description, SearchOperation.MATCH));
+            spec.add(new SearchStatement(Consts.DESCRIPTION, description, SearchOperation.MATCH));
         }
 
         if (visible != null) {
-            spec.add(new SearchStatement("visible", visible, SearchOperation.EQUAL));
+            spec.add(new SearchStatement(Consts.VISIBLE, visible, SearchOperation.EQUAL));
         }
+
         return repository.findAll(spec);
     }
 
