@@ -26,5 +26,5 @@ eureka:
     service-url:
       defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
   instance:
-    preferIpAddress: true
+    preferIpAddress: true #true: utiliza IP de la máquina (para entorno local); false: utiliza nombre de dominio de la máquina (para entornos deplegados). El nombre de dominio es el parámetro "hostname" de abajo
     hostname: ms-inventory-products
